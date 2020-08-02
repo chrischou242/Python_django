@@ -1,0 +1,27 @@
+<h1>Dojo Survey</h1>
+<h3>Info</h3>
+<form action='/survey' method='post'>
+    {% csrf_token %}
+    <div class = wrapper>
+
+        <div class="form">
+        <p>Name: <input type='text' name='name'></p>
+        <p>Dojo_Location: <label for="location" name='location'></label>
+            <select name ="location">
+                <option value="San Jose">San Jose</option>
+                <option value="Seattle">Seattle</option>
+            </select>
+        </p>
+            
+        <p>Favorite_Language: <label for="language" name ='language'></label>
+            <select name="language" >
+                <option value="Python">Python</option>
+                 <option value="Java">Java</option>
+            </select>
+        </p>
+        <button type='submit'>Create User</button>
+        <p>Name in session is: {{request.session.name}}</p>
+        </div>
+    </div>
+</form>
+

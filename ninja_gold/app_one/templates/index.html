@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monkey Game</title>
+    {% load static %}	
+    <link rel="stylesheet" href="{% static 'style.css' %}">    
+  
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Your gold: {{request.session.gold}}</h1>
+        <a href="/reset">Reset game</a>
+
+        <div class="box">
+            <div class="box_one">
+                <form action="/process_money" method="POST">
+                    {% csrf_token %}
+                    <h3>Farm</h3>
+                    <input type="hidden" name='location' value='farm'>
+                    <button type='submit'>Find more gold!!!</button>
+                </form>
+            </div>
+
+            
+            <div class="box_two">
+                <form action="/process_money" method="POST">
+                    {% csrf_token %}
+                    <h3>Cave</h3>
+                    <input type="hidden" name='location' value='cave'>
+                    <button type='submit'>Find more gold!!!</button>
+                </form>
+            </div>
+        
+            <div class="box_three">
+                <form action="/process_money" method="POST">
+                    {% csrf_token %}
+                    <h3>House</h3>
+                    <input type="hidden" name='location' value='house'>
+                    <button type='submit'>Find more gold!!!</button>
+                </form>
+            </div>
+        
+            <div class="box_four">
+                <form action="/process_money" method="POST">
+                    {% csrf_token %}
+                    <h3>casio</h3>
+                    <input type="hidden" name='location' value='casino'>
+                    <button type='submit'>Find more gold!!!</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+

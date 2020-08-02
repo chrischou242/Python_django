@@ -1,0 +1,30 @@
+.wrapper{
+    margin: auto;
+    margin:0;
+    padding: 50px;
+    
+}
+
+
+
+.top_box,.bottom_box{
+    border: solid;
+    
+}
+
+.top_box{
+    width: 200px;
+    height: 50px;
+    margin-bottom: 50px;
+    margin-left: 600px;
+}
+
+.bottom_box{
+    width: 400px;
+    height: 100px;
+    margin-left: 500px;
+}
+
+p,h1{
+    margin-left: 20px;
+}

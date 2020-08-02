@@ -1,0 +1,11 @@
+.wrapper {
+   margin:auto;
+   margin:0;
+   
+}
+
+.box {
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+}
